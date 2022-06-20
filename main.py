@@ -2,15 +2,15 @@
 plataforma = [' ' for x in range(10)]
 
 
-def inserirletra(letra, posicao):
+def inserir_letra(letra, posicao):
     plataforma[posicao] = letra
 
 
-def espacovazio(posicao):  # ESPAÇO DA PLATAFORMA ESTÁ VAZIO?
+def espaco_vazio(posicao):  # ESPAÇO DA PLATAFORMA ESTÁ VAZIO?
     return plataforma[posicao] == ' '
 
 
-def desenharplataforma(plataforma):
+def desenhar_plataforma(plataforma):
     print('   |   |')
     print(' ' + plataforma[1] + ' | ' + plataforma[2] + ' | ' + plataforma[3])
     print('   |   |')
@@ -39,19 +39,19 @@ def vencedor(pltfm, ltr):
            or (pltfm[3] == ltr and pltfm[5] == ltr and pltfm[7] == ltr)
 
 
-def movjogador():
+def mov_jogador():
     pass
 
 
-def compomve():
+def compo_move():
     pass
 
 
-def selecionarandom(plataforma):
+def seleciona_random(plataforma):
     pass
 
 
-def plataformafull(plataforma):
+def plataforma_full(plataforma):
     pass
 
 
