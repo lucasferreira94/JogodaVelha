@@ -49,11 +49,11 @@ def mov_jogador():
                     run = False                             # A MENSAGEM AO USUÁRIO (POR FAVOR, SELECIONE A POS...) E A LETRA SERÁ INSERIDA
                     inserir_letra('X', mov)
                 else:
-                    print('Desculpe, o espaço está ocupado')
+                    print('Desculpe, o espaço está ocupado', '\n')
             else:
-                print('Por favor, digite um número dentro do range (1-9)')
+                print('Por favor, digite um número dentro do range (1-9)', '\n')
         except:
-            print('Por favor, digite um número')
+            print('Por favor, digite um número', '\n')
 
 
 def mov_computador():
@@ -115,7 +115,7 @@ def main():
             mov_jogador()                               # JOGADOR 1 PODERÁ FAZER SEU MOVIMENTO
             desenha_plataforma(plataforma)
         else:
-            print('Desculpe, \{O\} ganhou o jogo!')
+            print('Desculpe, \{O\} ganhou o jogo!', '\n')
             break
 
         if not (vencedor(plataforma, 'X')):             # VENCEDOR NÃO É O 'x'?
@@ -124,19 +124,20 @@ def main():
                 print('EMPATE!')
             else:
                 inserir_letra('O', mov)
-                print('Computador colocou \"O\" na posição', mov, ':')
+                print('Computador colocou \"O\" na posição', mov, ':', '\n')
                 desenha_plataforma(plataforma)
         else:
-            print('\{X\} ganhou o jogo dessa vez! ')
+            print('\{X\} ganhou o jogo dessa vez! ', '\n')
             break
 
     if plataforma_full(plataforma):
-        print('EMPATE!')
+        print('EMPATE! ')
 
 
 while True:
     resposta = input('Deseja jogar novamente? [S/N] ')
-    if resposta.lower == 's' or resposta.lower == 'sim':
+    if resposta.lower() == 's' or resposta.lower() == 'sim':
+        board = [' ' for x in range(10)]
         print('---------------------------------------' '\n')
         main()
     else:
